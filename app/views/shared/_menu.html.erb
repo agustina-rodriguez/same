@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">INICIO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/medical_centers">Centros de Salud</a>
+        <a class='nav-link'>
+          <% if user_signed_in? %>
+            <%= link_to 'Trabajadores', workers_url, class:'nav-link' %>
+          <% else %>
+            <%= link_to 'Trabajadores', '#', class:'nav-link disabled' %>
+          <% end %>
+        </a>
+        <a class='nav-link'>
+          <% if user_signed_in? %>
+            <%= link_to 'Guardias', guards_url, class:'nav-link' %>
+          <% else %>
+            <%= link_to 'Guardias', '#', class:'nav-link disabled' %>
+          <% end %>
+        </a>
+        <a class='nav-link'>
+          <% if user_signed_in? %>
+            <%= link_to 'Turnos', appointments_url, class:'nav-link' %>
+          <% else %>
+            <%= link_to 'Turnos', '#', class:'nav-link disabled' %>
+          <% end %>
+        </a>
+        <%= render 'shared/menu_user' %>
+      </div>
+    </div>
+  </div>
+</nav>

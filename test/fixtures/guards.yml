@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guard_date: 2021-06-14 21:47:10
+  medical_center: one
+  worker: one
+  appointment: one
+
+two:
+  guard_date: 2021-06-14 21:47:10
+  medical_center: two
+  worker: two
+  appointment: two
